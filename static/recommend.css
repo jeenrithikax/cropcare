@@ -1,0 +1,193 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: #f4f7f6;
+    color: #333;
+}
+
+body {
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+       url("/static/images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding-bottom: 60px;
+}
+
+/* ===== HEADER ===== */
+.top-header {
+    background: #2e7d32;
+    color: #fff;
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.profile-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logout-btn {
+    background: #fff;
+    color: #2e7d32;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #c8e6c9;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+    width: 420px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.form-container p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* ===== FORM ===== */
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+/* ===== BUTTON ===== */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+/* ===== ERROR ===== */
+.error-box {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-box {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* ===== CROP DETAILS ===== */
+.crop-card {
+    width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.crop-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.crop-header img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.crop-header h2 {
+    color: #2e7d32;
+}
+
+.crop-info {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.crop-info div {
+    background: #f1f8e9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}

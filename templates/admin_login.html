@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login | CropCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_login.css') }}">
+</head>
+
+<body class="admin-bg">
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">🌱 CropCare</div>
+
+    <div class="header-right">
+        <a href="/" class="home-btn">Home</a>
+    </div>
+</div>
+
+<!-- LOGIN BOX -->
+<div class="admin-login-box">
+    <h2>🔐 Admin Login</h2>
+
+    <form method="post">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter username">
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Password">
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+ <div class="welcome">
+        <h3>Welcome to CropCare</h3>
+        <p>Smart Crop Recommendation System</p>
+    </div>
+
+</body>
+</html>

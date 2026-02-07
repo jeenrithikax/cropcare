@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard | CropCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="admin-header">
+    <div class="logo">🌱 CropCare Admin</div>
+    <div class="admin-info">
+        👤 {{ admin }}
+        <a href="/admin/logout">Logout</a>
+    </div>
+</header>
+
+<!-- ===== DASHBOARD ===== -->
+<div class="dashboard-container">
+
+    <div class="card">
+        <h3>➕ Add Crop & Soil</h3>
+        <p>Add new crop and soil data</p>
+        <a href="/admin/add-crop">Add Data</a>
+    </div>
+
+    <div class="card">
+        <h3>💬 View Feedback</h3>
+        <p>See user feedback & suggestions</p>
+        <a href="/admin/feedback">View Feedback</a>
+    </div>
+
+    <div class="card">
+    <h3>👥 View Users</h3>
+    <p>See all registered users</p>
+    <a href="/admin/users">View Users</a>
+</div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="admin-footer">
+    🌾 CropCare – Smart Crop Recommendation System for Farmers
+</footer>
+
+</body>
+</html>

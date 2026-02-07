@@ -1,0 +1,112 @@
+
+/* ================= ADMIN DASHBOARD ================= */
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ===== HEADER ===== */
+.admin-header {
+    height: 70px;
+    background: #1b5e20;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.admin-header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.admin-info a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    background: #c62828;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 60px;
+
+    /* 🔥 MAIN FIX */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* ===== CARD ===== */
+.card {
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+/* ===== BUTTON ===== */
+.card a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background: #1b5e20;
+}
+
+/* ===== FOOTER ===== */
+.admin-footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

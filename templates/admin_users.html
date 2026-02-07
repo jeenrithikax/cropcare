@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin | Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_users.css') }}">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="top-header">
+    <div class="left-header">🌱 CropCare</div>
+
+    <div class="right-header">
+        👤 {{ admin }}
+        <a href="/admin/dashboard">Dashboard</a>
+    </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main class="page-container">
+
+    <div class="users-box">
+        <h2>👥 Registered Users</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Last Login</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for u in users %}
+                <tr>
+                    <td>{{ u.id }}</td>
+                    <td>{{ u.username }}</td>
+                    <td>{{ u.email }}</td>
+                    <td>{{ u.last_login or "Never" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    © 2026 Crop Project | Designed for Farmers 🌾
+</footer>
+
+</body>
+</html>

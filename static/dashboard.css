@@ -1,0 +1,195 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.dashboard {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/bg.jpg") center/cover no-repeat;
+}
+
+/* ===== HEADER ===== */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-size: 15px;
+}
+
+.logout-btn {
+    text-decoration: none;
+    background: #c62828;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #8e0000;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.dashboard-container {
+    padding: 50px 60px;
+}
+
+/* ===== TOP SECTION ===== */
+.top-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== START CARD ===== */
+.start-card {
+    background: #ffffff;
+    width: 360px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.start-card h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.start-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.start-card a {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.start-card a:hover {
+    background: #1b5e20;
+}
+
+/* ===== FEEDBACK CARD ===== */
+.feedback-card {
+    background: #ffffff;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.feedback-card h3 {
+    color: #0f7717;
+    margin-bottom: 10px;
+}
+
+.feedback-card p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.feedback-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #06610e;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.feedback-btn:hover {
+    background: #055718;
+}
+
+/* ===== BOTTOM CARDS ===== */
+.bottom-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.dash-card {
+    background: rgba(255,255,255,0.95);
+    width: 260px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.dash-card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.dash-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+.dashboard-footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.dashboard-footer h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.dashboard-footer p {
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 30px 20px;
+    }
+
+    .start-card,
+    .feedback-card {
+        width: 100%;
+        max-width: 380px;
+    }
+}

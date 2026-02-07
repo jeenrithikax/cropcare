@@ -1,0 +1,147 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/bg.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.home-btn {
+    text-decoration: none;
+    color: #fff;
+    background: #2e7d32;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #1b5e20;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box {
+    width: 350px;
+    margin: auto;
+    margin-top: 60px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+/* ===== INPUTS ===== */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* ===== BUTTON ===== */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #1b5e20;
+}
+
+/* ===== REGISTER LINK ===== */
+.login-box p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-box a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* ===== WELCOME TEXT ===== */
+.welcome {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.welcome h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.welcome p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+.register-text {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        margin-top: 40px;
+    }
+}

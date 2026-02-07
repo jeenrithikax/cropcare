@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - CropCare</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+
+<body class="login-page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <a href="/" class="home-btn">Home</a>
+        <div class="logo">🌱 CropCare</div>
+    </div>
+
+    <!-- LOGIN BOX -->
+    <div class="login-box">
+        <h2>Login</h2>
+
+        {% if success %}
+            <p class="success-msg">{{ success }}</p>
+        {% endif %}
+
+        {% if error %}
+            <p class="error-msg">{{ error }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- ✅ THIS PART WAS MISSING -->
+        <p class="register-text">
+            Don’t have an account?
+            <a href="/register">Register now</a>
+        </p>
+    </div>
+
+    <!-- WELCOME -->
+    <div class="welcome">
+        <h3>Welcome to CropCare</h3>
+        <p>Smart Crop Recommendation System</p>
+    </div>
+
+</body>
+</html>

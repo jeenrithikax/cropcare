@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Crop | Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_add_crop.css') }}">
+</head>
+<body>
+
+<header class="admin-header">
+    <div class="logo">🌱 CropCare Admin</div>
+    <a href="/admin/dashboard">⬅ Dashboard</a>
+</header>
+
+<div class="form-container">
+<form method="POST" enctype="multipart/form-data">
+
+
+<h2>🌾 Crop Details</h2>
+
+<input name="crop_name" placeholder="Crop Name" required>
+<input name="scientific_name" placeholder="Scientific Name" required>
+<input name="season" placeholder="Season" required>
+<input name="duration" placeholder="Duration (days)" required>
+<input name="demand" placeholder="Demand (Low/Medium/High)" required>
+<label>Crop Image</label>
+<input type="file" name="image" accept="image/*" required>
+
+<div class="grid">
+<input name="n_min" placeholder="N Min" required>
+<input name="n_max" placeholder="N Max" required>
+<input name="p_min" placeholder="P Min" required>
+<input name="p_max" placeholder="P Max" required>
+<input name="k_min" placeholder="K Min" required>
+<input name="k_max" placeholder="K Max" required>
+</div>
+
+<div class="grid">
+<input name="ph_min" placeholder="pH Min" required>
+<input name="ph_max" placeholder="pH Max" required>
+<input name="temp_min" placeholder="Temp Min" required>
+<input name="temp_max" placeholder="Temp Max" required>
+</div>
+
+<div class="grid">
+<input name="humidity_min" placeholder="Humidity Min" required>
+<input name="humidity_max" placeholder="Humidity Max" required>
+<input name="rainfall_min" placeholder="Rainfall Min" required>
+<input name="rainfall_max" placeholder="Rainfall Max" required>
+</div>
+
+<h2>🌱 Soil Details</h2>
+
+<input name="location" placeholder="Location" required>
+<input name="soil_type" placeholder="Soil Type" required>
+
+<div class="grid">
+<input name="nitrogen" placeholder="Nitrogen" required>
+<input name="phosphorus" placeholder="Phosphorus" required>
+<input name="potassium" placeholder="Potassium" required>
+</div>
+
+<div class="grid">
+<input name="temperature" placeholder="Temperature" required>
+<input name="humidity" placeholder="Humidity" required>
+<input name="rainfall" placeholder="Rainfall" required>
+</div>
+
+<button type="submit">➕ Add Crop & Soil</button>
+
+</form>
+</div>
+
+</body>
+</html>

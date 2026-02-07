@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ crop.crop_name }} | CropCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='crop_details.css') }}">
+</head>
+
+<body class="details-page">
+
+<!-- ===== HEADER ===== -->
+<header class="top-header">
+    <div class="logo">🌱 CropCare</div>
+
+    <div class="profile-box">
+        <span>👤 {{ username }}</span>
+        <a href="/dashboard" class="back-btn">⬅ Dashboard</a>
+    </div>
+</header>
+
+<!-- ===== MAIN CARD ===== -->
+<div class="crop-details-container">
+
+    <!-- LEFT : IMAGE -->
+    <div class="crop-image-box">
+    <img src="{{ url_for('static', filename=crop.image) }}"
+     alt="{{ crop.crop_name }}">
+
+</div>
+
+
+    <!-- RIGHT : INFO -->
+    <div class="crop-info-box">
+
+        <h1>🌾 {{ crop.crop_name }}</h1>
+        <p class="scientific-name">{{ crop.scientific_name }}</p>
+
+        <div class="info-grid">
+            <div><b>Season:</b> {{ crop.season }}</div>
+            <div><b>Duration:</b> {{ crop.duration }}</div>
+            <div><b>Demand:</b> {{ crop.demand }}</div>
+            <div><b>Location:</b> {{ location }}</div>
+            <div><b>Soil Type:</b> {{ soil_type }}</div>
+            <div><b>Soil pH:</b> {{ soil_ph }}</div>
+        </div>
+
+        <h3>🌱 Soil & Climate Requirements</h3>
+
+        <table class="details-table">
+            <tr><th>Nitrogen (N)</th><td>{{ crop.n_min }} – {{ crop.n_max }}</td></tr>
+            <tr><th>Phosphorus (P)</th><td>{{ crop.p_min }} – {{ crop.p_max }}</td></tr>
+            <tr><th>Potassium (K)</th><td>{{ crop.k_min }} – {{ crop.k_max }}</td></tr>
+            <tr><th>pH Range</th><td>{{ crop.ph_min }} – {{ crop.ph_max }}</td></tr>
+            <tr><th>Temperature (°C)</th><td>{{ crop.temp_min }} – {{ crop.temp_max }}</td></tr>
+            <tr><th>Humidity (%)</th><td>{{ crop.humidity_min }} – {{ crop.humidity_max }}</td></tr>
+            <tr><th>Rainfall (mm)</th><td>{{ crop.rainfall_min }} – {{ crop.rainfall_max }}</td></tr>
+        </table>
+
+    </div>
+</div>
+
+<footer class="footer">
+    🌾 Smart Crop Recommendation System – CropCare
+</footer>
+
+</body>
+</html>

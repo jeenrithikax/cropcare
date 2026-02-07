@@ -1,0 +1,112 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+.admin-bg {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/bg.jpg"); /* optional image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #1b5e20;
+    color: #fff;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.header-right .home-btn {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-right .home-btn:hover {
+    text-decoration: underline;
+}
+
+/* ===== LOGIN BOX ===== */
+.admin-login-box {
+    width: 360px;
+    background: #ffffff;
+    margin: 80px auto 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.admin-login-box h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+.admin-login-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.admin-login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* ===== BUTTON ===== */
+.admin-login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #2e7d32;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-login-box button:hover {
+    background: #1b5e20;
+}
+
+/* ===== WELCOME TEXT ===== */
+.welcome {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.welcome h3 {
+    font-size: 22px;
+}
+
+.welcome p {
+    font-size: 14px;
+    opacity: 0.9;
+}
