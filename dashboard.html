@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | CropCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body class="dashboard">
+
+<!-- HEADER -->
+<div class="dashboard-header">
+    <div class="logo">🌱 CropCare</div>
+
+    <div class="profile-box">
+        <span class="user-name">👤 {{ username }}</span>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="dashboard-container">
+
+    <!-- TOP SECTION -->
+    <div class="top-section">
+
+        <!-- START CARD -->
+        <div class="start-card">
+            <h2>🌾 Start Crop Recommendation</h2>
+            <p>Find the best crop for your soil & climate</p>
+            <a href="/recommend">Start</a>
+        </div>
+
+        <!-- FEEDBACK CARD -->
+        <div class="feedback-card">
+            <h3>📝 Feedback</h3>
+            <p>Your feedback helps us improve CropCare.</p>
+            <a href="/feedback" class="feedback-btn">Give Feedback</a>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM CARDS -->
+    <div class="bottom-cards">
+        <div class="dash-card">
+            <h3>📊 Easy to Use</h3>
+            <p>Simple inputs and fast results</p>
+        </div>
+
+        <div class="dash-card">
+            <h3>🔒 Secure Data</h3>
+            <p>Your information is safe with us</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="dashboard-footer">
+        <h3>🌱 Welcome to CropCare</h3>
+        <p>Smart farming starts with the right decision</p>
+    </div>
+
+</div>
+
+</body>
+</html>

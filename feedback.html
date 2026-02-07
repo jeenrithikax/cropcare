@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback | CropCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback.css') }}">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="top-header">
+    <div class="logo">🌱 CropCare</div>
+
+    <div class="user-box">
+        👤 {{ username }}
+        <a href="/dashboard">Dashboard</a>
+    </div>
+</header>
+
+<!-- ===== FEEDBACK CARD ===== -->
+<div class="feedback-container">
+    <h2>💬 User Feedback</h2>
+    <p>Your feedback helps us improve CropCare</p>
+
+    {% if success %}
+        <div class="success-msg">{{ success }}</div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error-msg">{{ error }}</div>
+    {% endif %}
+
+    <!-- 🔥 IMPORTANT: enctype -->
+    <form method="POST" action="/feedback" enctype="multipart/form-data">
+
+        <label>Feedback Type</label>
+        <select name="type" required>
+            <option value="">-- Select --</option>
+            <option value="Suggestion">Suggestion</option>
+            <option value="Bug Report">Bug Report</option>
+            <option value="Crop Recommendation">Crop Recommendation</option>
+            <option value="UI / Design">UI / Design</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Your Feedback</label>
+        <textarea name="message"
+                  rows="5"
+                  placeholder="Write your feedback here..."
+                  required></textarea>
+
+        <label>Upload Image (optional)</label>
+        <input type="file" name="image" accept="image/*">
+
+        <button type="submit">📩 Submit Feedback</button>
+    </form>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    🌾 CropCare – Smart Farming Assistant
+</footer>
+
+</body>
+</html>

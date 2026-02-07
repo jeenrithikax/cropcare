@@ -1,0 +1,116 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== HEADER ===== */
+.admin-header {
+    background: #1b5e20;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.admin-header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.admin-header a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* ===== HEADINGS ===== */
+.form-container h2 {
+    margin: 25px 0 15px;
+    color: #2e7d32;
+    border-left: 5px solid #2e7d32;
+    padding-left: 10px;
+}
+
+/* ===== INPUT FIELDS ===== */
+.form-container input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+/* ===== GRID LAYOUT ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== BUTTON ===== */
+.form-container button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: #2e7d32;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: #1b5e20;
+}

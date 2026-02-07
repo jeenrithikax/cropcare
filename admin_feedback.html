@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Feedback | CropCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_feedback.css') }}">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="top-header">
+
+    <div class="left-header">
+        🌱 CropCare
+    </div>
+
+    <div class="right-header">
+        👤 {{ admin }}
+        <a href="/admin/dashboard">Dashboard</a>
+    </div>
+
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="page-container">
+
+    <div class="feedback-box">
+        <h2>💬 User Feedbacks</h2>
+
+        <table border="1">
+<tr>
+    <th>User</th>
+    <th>Type</th>
+    <th>Message</th>
+    <th>Image</th>
+    <th>Date</th>
+</tr>
+
+{% for fb in feedbacks %}
+<tr>
+    <td>{{ fb.username }}</td>
+    <td>{{ fb.feedback_type }}</td>
+    <td>{{ fb.message }}</td>
+    <td>
+        {% if fb.image %}
+            <img src="{{ url_for('static', filename='feedback_uploads/' + fb.image) }}"
+                 width="120">
+        {% else %}
+            No Image
+        {% endif %}
+    </td>
+    <td>{{ fb.created_at }}</td>
+</tr>
+{% endfor %}
+</table>
+
+    </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    © 2026 Crop Project | Designed for Farmers 🌾
+</footer>
+
+</body>
+</html>

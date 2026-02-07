@@ -1,0 +1,134 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== BODY & BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("/static/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ===== HEADER ===== */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(27, 94, 32, 0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* LEFT – CROPCARE */
+.left-header {
+    background: white;
+    color: #2e7d32;
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* RIGHT – ADMIN */
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #e8f5e9;
+    font-size: 14px;
+}
+
+.right-header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.right-header a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
+.page-container {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* ===== FEEDBACK BOX ===== */
+.feedback-box {
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.feedback-box h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(to right, #43a047, #2e7d32);
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tbody tr {
+    background: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f8e9;
+}
+
+tbody tr:hover {
+    background: #e0f2f1;
+    transition: 0.3s;
+}
+
+/* IMAGE */
+td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #c8e6c9;
+}
+
+/* ===== FOOTER (FIXED BOTTOM) ===== */
+.footer {
+    background: rgba(27, 94, 32, 0.95);
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 13px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
+}
